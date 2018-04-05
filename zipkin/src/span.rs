@@ -23,7 +23,7 @@ use {Annotation, Endpoint, SpanId, TraceId};
 /// This has an impact on the relationship between the span's timestamp, duration, and local
 /// endpoint.
 #[derive(Debug, Copy, Clone)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
 #[cfg_attr(feature = "serde", serde(rename_all = "SCREAMING_SNAKE_CASE"))]
 pub enum Kind {
     /// The client side of an RPC.
